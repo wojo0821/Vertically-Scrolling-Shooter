@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class LoopingBackground : MonoBehaviour
 {
-    [SerializeField] private float scrollSpeed;
-    [SerializeField] private Vector2 startPosition;
-    [SerializeField] private Vector2 endPosition;
+    [SerializeField] private float scrollSpeed = 0f;
+    [SerializeField] private Vector2 startPosition = Vector2.zero;
+    [SerializeField] private Vector2 endPosition = Vector2.zero;
 
     void FixedUpdate()
     {
