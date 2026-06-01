@@ -18,7 +18,7 @@ public class PlayerMove : MonoBehaviour
     private void Update()
     {
         ClampPosition();
-        nowPitch = Mathf.Lerp(nowPitch, propellerspeed, 1f * Time.deltaTime);
+        nowPitch = Mathf.Lerp(nowPitch, propellerspeed, 2.0f * Time.deltaTime);
         AudioManager.instance.audioSource.pitch = nowPitch;
     }
     private void FixedUpdate()
