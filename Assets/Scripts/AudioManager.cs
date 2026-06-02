@@ -6,6 +6,7 @@ public class AudioManager : MonoBehaviour
     //싱글톤으로 구현
     public AudioSource audioSource;
     public AudioSource audioSource2;
+    public AudioSource audioSource3;
     [SerializeField] private AudioClip[] backgroundMusic = null;
     private int nowBGM = 0;
     public static AudioManager instance { get; private set; }
