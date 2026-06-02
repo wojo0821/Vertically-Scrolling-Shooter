@@ -31,7 +31,8 @@ public class AudioManager : MonoBehaviour
     }
     public void SoundPlay(AudioClip audioClip)
     {
-        audioSource.PlayOneShot(audioClip);
+        audioSource.clip = audioClip;
+        audioSource.Play();
     }
     private void PlayNextBGM()
     {

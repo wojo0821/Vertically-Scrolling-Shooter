@@ -11,7 +11,7 @@ public class PlayerMove : MonoBehaviour
     private float _airdrag = 0.5f;
     private float propellerspeed = 1f;
 
-    private void Awake()
+    private void Start()
     {
         AudioManager.instance.SoundPlay(movesound);
     }
