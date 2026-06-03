@@ -5,6 +5,7 @@ public class PlayerMove : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed = 5.0f;
     [SerializeField] private AudioClip movesound = null;
+    [SerializeField] private Rigidbody2D rb = null;
 
     private float nowPitch = 1f;
     private Vector2 _moveInput;
@@ -23,7 +24,7 @@ public class PlayerMove : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        transform.position += new Vector3(_moveInput.x, _moveInput.y * _airdrag, 0) * _moveSpeed * Time.deltaTime;
+        rb.linearVelocity = new Vector3(_moveInput.x, _moveInput.y * _airdrag, 0) * _moveSpeed;
     }
     public void Move(InputAction.CallbackContext context)
     {
